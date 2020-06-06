@@ -1,0 +1,21 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+canvas {
+  display: block;
+}
+
+/*c1 {
+  display: block;
+  background-color: black;
+  border: solid;
+}*/
+
+/*img {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: 5;
+}*/
