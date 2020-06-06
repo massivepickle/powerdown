@@ -290,7 +290,7 @@ function draw() {
     background(m);
     camera.position.x = displayWidth/2;
     camera.position.y = displayHeight/2;
-    camera.zoom = 1*(displayWidth/1920);
+    camera.zoom = 1*(1920/displayWidth);
 
     mainMusic.setVolume(0,0);
     winMusic.setVolume(0,0);
