@@ -255,7 +255,7 @@ function preload(){
 }
 
 function setup() {
-  createCanvas(displayWidth,displayHeight);
+  createCanvas(1920,1080);
   player = createSprite(160,90,10,10);
   player.speed = 5;
   level = new Level;
@@ -290,7 +290,7 @@ function draw() {
     background(m);
     camera.position.x = displayWidth/2;
     camera.position.y = displayHeight/2;
-    camera.zoom = 1*(1920/displayWidth);
+    camera.zoom = 1;//*(1920/displayWidth);
 
     mainMusic.setVolume(0,0);
     winMusic.setVolume(0,0);
