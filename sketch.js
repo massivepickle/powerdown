@@ -333,7 +333,7 @@ function draw() {
     menuMusic.play();
 
     push();
-    translate(1920/2-865*windowWidth/1920,1080/2-15*windowHeight/1080);
+    translate(displayWidth/2-865*(windowWidth*displayWidth/1920)/1920,displayHeight/2-15*(windowHeight*displayHeight/1080)/1080);
     for(var i = 0; i < 5; i++){
       if(i === difficulty){
         tint(0,255,100,255);
@@ -551,7 +551,7 @@ function transition(state,time){
     //console.log("FALSE!");
     gamestate = state;
   }
-  image(blackscreen,0,0,displayWidth,displayHeight);
+  image(blackscreen,0,0,windowWidth,windowHeight);
   pop();
 }
 
