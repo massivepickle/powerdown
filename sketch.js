@@ -333,7 +333,7 @@ function draw() {
     menuMusic.play();
 
     push();
-    translate(displayWidth/2-865*(windowWidth*displayWidth/1920)/1920,displayHeight/2-15*(windowHeight*displayHeight/1080)/1080);
+    translate(displayWidth/2-865*(windowWidth)/1920,displayHeight/2-15*(windowHeight)/1080);
     for(var i = 0; i < 5; i++){
       if(i === difficulty){
         tint(0,255,100,255);
@@ -342,19 +342,19 @@ function draw() {
       }
       switch(i){
         case 0:
-          image(easy,-1+displayWidth/1920,i*100*windowHeight/1080,666*windowWidth/1920,96*windowHeight/1080);
+          image(easy,-1+displayWidth/1920,i*100*(windowHeight)/1080,666*(windowWidth)/1920,96*(windowHeight)/1080);
           break;
         case 1:
-          image(medium,-1+displayWidth/1920,i*100*windowHeight/1080,666*windowWidth/1920,96*windowHeight/1080);
+          image(medium,-1+displayWidth/1920,i*100*(windowHeight)/1080,666*(windowWidth)/1920,96*(windowHeight)/1080);
           break;
         case 2:
-          image(hard,-1+displayWidth/1920,i*100*windowHeight/1080,666*windowWidth/1920,96*windowHeight/1080);
+          image(hard,-1+displayWidth/1920,i*100*(windowHeight)/1080,666*(windowWidth)/1920,96*(windowHeight)/1080);
           break;
         case 3:
-          image(insane,-1+displayWidth/1920,i*100*windowHeight/1080,666*windowWidth/1920,96*windowHeight/1080);
+          image(insane,-1+displayWidth/1920,i*100*(windowHeight)/1080,666*(windowWidth)/1920,96*(windowHeight)/1080);
           break;
         case 4:
-          image(impossible,-1+displayWidth/1920,i*100*windowHeight/1080,666*windowWidth/1920,96*windowHeight/1080);
+          image(impossible,-1+displayWidth/1920,i*100*(windowHeight)/1080,666*(windowWidth)/1920,96*(windowHeight)/1080);
           break;
       }
     }
