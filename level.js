@@ -178,7 +178,7 @@ class Level{
                     player.collide(gem2);
                     player.collide(gem3);
                     if(textx !== 0 && texty !== 0){
-                        textFont('Agency FB');
+                        textFont(agencyfb);
                         textSize(40);
                         stroke(100,100,0,50);
                         strokeWeight(5);
@@ -340,7 +340,7 @@ class Level{
                     player.collide(gem2);
                     player.collide(gem3);
                     if(textx !== 0 && texty !== 0){
-                        textFont('Agency FB');
+                        textFont(agencyfb);
                         textSize(40);
                         stroke(100,100,0,50);
                         strokeWeight(5);
@@ -519,7 +519,7 @@ class Level{
                     player.collide(gem2);
                     player.collide(gem3);
                     if(textx !== 0 && texty !== 0){
-                        textFont('Agency FB');
+                        textFont(agencyfb);
                         textSize(40);
                         stroke(100,100,0,50);
                         strokeWeight(5);
@@ -712,7 +712,7 @@ class Level{
                     player.collide(gem2);
                     player.collide(gem3);
                     if(textx !== 0 && texty !== 0){
-                        textFont('Agency FB');
+                        textFont(agencyfb);
                         textSize(40);
                         stroke(100,100,0,50);
                         strokeWeight(5);
@@ -908,7 +908,7 @@ class Level{
                     player.collide(gem2);
                     player.collide(gem3);
                     if(textx !== 0 && texty !== 0){
-                        textFont('Agency FB');
+                        textFont(agencyfb);
                         textSize(40);
                         stroke(100,100,0,50);
                         strokeWeight(5);
@@ -1109,7 +1109,7 @@ class Level{
                     player.collide(gem2);
                     player.collide(gem3);
                     if(textx !== 0 && texty !== 0){
-                        textFont('Agency FB');
+                        textFont(agencyfb);
                         textSize(40);
                         stroke(100,100,0,50);
                         strokeWeight(5);
@@ -1315,7 +1315,7 @@ class Level{
                     player.collide(gem2);
                     player.collide(gem3);
                     if(textx !== 0 && texty !== 0){
-                        textFont('Agency FB');
+                        textFont(agencyfb);
                         textSize(40);
                         stroke(100,100,0,50);
                         strokeWeight(5);
@@ -1525,7 +1525,7 @@ class Level{
                     player.collide(gem2);
                     player.collide(gem3);
                     if(textx !== 0 && texty !== 0){
-                        textFont('Agency FB');
+                        textFont(agencyfb);
                         textSize(40);
                         stroke(100,100,0,50);
                         strokeWeight(5);
@@ -1741,7 +1741,7 @@ class Level{
                     player.collide(gem2);
                     player.collide(gem3);
                     if(textx !== 0 && texty !== 0){
-                        textFont('Agency FB');
+                        textFont(agencyfb);
                         textSize(40);
                         stroke(100,100,0,50);
                         strokeWeight(5);
@@ -1994,21 +1994,21 @@ class Level{
                         if(opaque){
                             textAlign(CENTER);
                             textStyle(BOLD);
-                            textFont("OCR A");
-                            textSize(15);
+                            textFont(ocra);
+                            textSize(13);
                             strokeWeight(1);
                             fill("purple");
                             stroke(255,255,255,200);
-                            text("DISAPPEAR IN: " + roundoff(appearin,1), camera.position.x, camera.position.y - windowHeight/(camera.zoom * 2) + 18); 
+                            text("DISAPPEAR IN: " + roundoff(appearin,1), camera.position.x+2.5, camera.position.y - windowHeight/(camera.zoom * 2) + 18); 
                         }else{
                             textAlign(CENTER);
                             textStyle(BOLD);
-                            textFont("OCR A");
-                            textSize(15);
+                            textFont(ocra);
+                            textSize(13);
                             strokeWeight(1);
                             fill("purple");
                             stroke(255,255,255,200);
-                            text("APPEAR IN: " + roundoff(appearin-10+endbreaks,1), camera.position.x, camera.position.y - windowHeight/(camera.zoom * 2) + 18);
+                            text("APPEAR IN: " + roundoff(appearin-10+endbreaks,1), camera.position.x+2.5, camera.position.y - windowHeight/(camera.zoom * 2) + 18);
                         }
                     }
                     if(endbreaks >= 5){
@@ -2097,7 +2097,7 @@ class Level{
                         }
                     }
                     if(textx !== 0 && texty !== 0 && won){
-                        textFont('Agency FB');
+                        textFont(agencyfb);
                         textSize(40);
                         stroke(100,100,0,50);
                         strokeWeight(5);
@@ -2115,17 +2115,17 @@ class Level{
                     if(rbt[0].dashin >= -0.5 && !go){
                         textAlign(CENTER);
                         textStyle(BOLD);
-                        textFont("OCR A");
-                        textSize(15);
+                        textFont(ocra);
+                        textSize(13);
                         strokeWeight(1);
                         if(rbt[0].dashin > 0.1){
                             fill("purple");
                             stroke(255,255,255,200);
-                            text("\nDASH IN: " + roundoff(rbt[0].dashin,1), camera.position.x, camera.position.y - windowHeight/(camera.zoom * 2) + 18);
+                            text("\nDASH IN: " + roundoff(rbt[0].dashin,1), camera.position.x+2.5, camera.position.y - windowHeight/(camera.zoom * 2) + 18);
                         }else{
                             fill("#B80F0A");
                             stroke(255,255,255,200);
-                            text("\nDASH!", camera.position.x, camera.position.y - windowHeight/(camera.zoom * 2) + 18);
+                            text("\nDASH!", camera.position.x+2.5, camera.position.y - windowHeight/(camera.zoom * 2) + 18);
                         }
                     }
                     if(rbt[0].dashin <= 0 && rbt[0].dashin !== -1 && rbt[0].dashin !== -2){
@@ -2157,7 +2157,7 @@ class Level{
                 completionMusic.setVolume(0,0);
                 winMusic.setVolume(0,0);
                 opaque = false;
-                textFont('Agency FB');
+                textFont(agencyfb);
                 textSize(50);
                 stroke(255,0,0,50);
                 strokeWeight(15);
@@ -2185,8 +2185,8 @@ class Level{
             }
             textAlign(LEFT);
             textStyle(BOLD);
-            textFont("OCR A");
-            textSize(15);
+            textFont(ocra);
+            textSize(13);
             fill("purple");
             stroke(255,255,255,200);
             strokeWeight(1);
@@ -2201,7 +2201,7 @@ class Level{
             }
             if(lives <= -2){
                 opaque = false;
-                textFont('Agency FB');
+                textFont(agencyfb);
                 textSize(50);
                 stroke(255,0,0,50);
                 strokeWeight(15);
