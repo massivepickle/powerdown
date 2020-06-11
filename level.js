@@ -2154,6 +2154,8 @@ class Level{
                 mainMusic.setVolume(0.2,0.7);
                 bossMusic.setVolume(0.2,0.7);
                 bossMusic2.setVolume(0,0.9);
+                completionMusic.setVolume(0,0);
+                winMusic.setVolume(0,0);
                 opaque = false;
                 textFont('Agency FB');
                 textSize(50);
@@ -2176,6 +2178,8 @@ class Level{
                     mainMusic.setVolume(0,0.9);
                     bossMusic.setVolume(0,0.9);
                     bossMusic2.setVolume(0,0.9);
+                    completionMusic.setVolume(0,0);
+                    winMusic.setVolume(0,0);
                     lives = -2;
                 }
             }
@@ -2214,6 +2218,8 @@ class Level{
                 mainMusic.setVolume(0,0.9);
                 bossMusic.setVolume(0,0.9);
                 bossMusic2.setVolume(0,0.9);
+                completionMusic.setVolume(0,0);
+                winMusic.setVolume(0,0);
             }
         }
     }
