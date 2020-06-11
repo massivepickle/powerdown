@@ -67,6 +67,7 @@ var endTime = 0;
 var factor = 0;
 var factdiv = 1920;
 var startTime = 0;
+var agencyfb, ocra, arial;
 
 //level 1
 var l1_l1 = [];                                   //layer 1
@@ -255,6 +256,9 @@ function preload(){
   impossible = loadImage("impossible.png");
   selection = loadSound("selection.wav");
   click = loadSound("click.wav");
+  agencyfb = loadFont("AGENCYFB.TTF");
+  ocra = loadFont("OCRAStd.otf");
+  arial = loadFont("arial.ttf");
 }
 
 function setup() {
