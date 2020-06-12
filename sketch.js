@@ -458,6 +458,12 @@ function draw() {
     menuMusic.play();
 
     switch(rpg){
+      case -1:
+        change = true;
+        changeto = "menu";
+        changetime = round(millis());
+        rpg = rpg+11;
+        break;
       case 0:
         change = true;
         changeto = "menu";
@@ -487,6 +493,12 @@ function draw() {
         changeto = "menu";
         changetime = round(millis());
         rpg = rpg+10;
+        break;
+      case 8:
+        change = true;
+        changeto = "menu";
+        changetime = round(millis());
+        rpg = rpg+9;
         break;
       case 10:
         background(r1);
@@ -775,8 +787,8 @@ function v3(e){
 function touchStarted() {
   flag = 1;
   if(gamestate === "menu"){
-    if(mouseX >= 785*windowWidth/1920 && mouseX <= 1280*windowWidth/1920){
-      if(mouseY >= 625*windowHeight/1080 && mouseY < 860*windowHeight/1080){
+    if(touchX >= 785*windowWidth/1920 && touchX <= 1280*windowWidth/1920){
+      if(touchY >= 625*windowHeight/1080 && touchY < 860*windowHeight/1080){
         switch(difficulty){
           case 0:
             lives = 60;
@@ -809,7 +821,6 @@ function touchStarted() {
         levelTime = 0;
         totalTime = 0;
         changeto = "play";
-        selection.play();
         if(millis()-changetime > 1000){
           changetime = round(millis());
         }
@@ -822,8 +833,8 @@ function touchStarted() {
         opaquefactor = 0;
       }
     }
-    if(mouseX >= 1500*windowWidth/1920 && mouseX <= 1900*windowWidth/1920){
-      if(mouseY >= 605*windowHeight/1080 && mouseY < 855*windowHeight/1080){
+    if(touchX >= 1500*windowWidth/1920 && touchX <= 1900*windowWidth/1920){
+      if(touchY >= 605*windowHeight/1080 && touchY < 855*windowHeight/1080){
         rpg = 1;
         //gamestate = "rules";
         change = true;
@@ -833,28 +844,28 @@ function touchStarted() {
         }
       }
     }
-    if(mouseX >= 95*windowWidth/1920 && mouseX <= 761*windowWidth/1920){
-      if(mouseY >= 520*windowHeight/1080 && mouseY <= 620*windowHeight/1080){
+    if(touchX >= 95*windowWidth/1920 && touchX <= 761*windowWidth/1920){
+      if(touchY >= 520*windowHeight/1080 && touchY <= 620*windowHeight/1080){
         if(difficulty !== 0){
           selection.play();
         }
         difficulty = 0;
-      }else if(mouseY >= 620*windowHeight/1080 && mouseY <= 720*windowHeight/1080){
+      }else if(touchY >= 620*windowHeight/1080 && touchY <= 720*windowHeight/1080){
         if(difficulty !== 1){
           selection.play();
         }
         difficulty = 1;
-      }else if(mouseY >= 720*windowHeight/1080 && mouseY <= 820*windowHeight/1080){
+      }else if(touchY >= 720*windowHeight/1080 && touchY <= 820*windowHeight/1080){
         if(difficulty !== 2){
           selection.play();
         }
         difficulty = 2;
-      }else if(mouseY >= 820*windowHeight/1080 && mouseY <= 920*windowHeight/1080){
+      }else if(touchY >= 820*windowHeight/1080 && touchY <= 920*windowHeight/1080){
         if(difficulty !== 3){
           selection.play();
         }
         difficulty = 3;
-      }else if(mouseY >= 920*windowHeight/1080 && mouseY <= 1025*windowHeight/1080){
+      }else if(touchY >= 920*windowHeight/1080 && touchY <= 1025*windowHeight/1080){
         if(difficulty !== 4){
           selection.play();
         }
@@ -862,229 +873,17 @@ function touchStarted() {
       }
     }
   }else if(gamestate === "rules"){
-    if(mouseX > 1010*windowWidth/1920 && mouseX < 1430*windowWidth/1920){
-      if(mouseY > 865*windowHeight/1080 && mouseY < 1035*windowHeight/1080){
-        mouseIsPressed = false;
+    if(touchX > 1010*windowWidth/1920 && touchX < 1430*windowWidth/1920){
+      if(touchY > 865*windowHeight/1080 && touchY < 1035*windowHeight/1080){
+        touchIsPressed = false;
         rpg -= 1;
-        mouseIsPressed = false;
+        touchIsPressed = false;
       }
-    }else if(mouseX > 1460*windowWidth/1920 && mouseX < 1880*windowWidth/1920){
-      if(mouseY > 860*windowHeight/1080 && mouseY < 1035*windowHeight/1080){
-        mouseIsPressed = false;
+    }else if(touchX > 1460*windowWidth/1920 && touchX < 1880*windowWidth/1920){
+      if(touchY > 860*windowHeight/1080 && touchY < 1035*windowHeight/1080){
+        touchIsPressed = false;
         rpg += 1;
-        mouseIsPressed = false;
-      }
-    }
-  }
-}
-
-function touchEnded() {
-  flag = 1;
-  if(gamestate === "menu"){
-    if(mouseX >= 785*windowWidth/1920 && mouseX <= 1280*windowWidth/1920){
-      if(mouseY >= 625*windowHeight/1080 && mouseY < 860*windowHeight/1080){
-        switch(difficulty){
-          case 0:
-            lives = 60;
-            lifechance = 50;
-            break;
-          case 1:
-            lives = 40;
-            lifechance = 33;
-            break;
-          case 2:
-            lives = 25;
-            lifechance = 10;
-            break;
-          case 3:
-            lives = 11;
-            lifechance = 5;
-            break;
-          case 4:
-            lives = 1;
-            lifechance = 0.1;
-            break;
-        }
-        level = delete Level;
-        level = new Level;
-        lvl = 1;
-        create = true;
-        go = false;
-        change = true;
-        start = 0;
-        levelTime = 0;
-        totalTime = 0;
-        changeto = "play";
-        selection.play();
-        if(millis()-changetime > 1000){
-          changetime = round(millis());
-        }
-        player.m = true;
-        endbreaks = 0;
-        won = false;
-        player.t = 255; player.x = 160; player.y = 90;
-        wallbreaks = 0;
-        totalWallbreaks = 0;
-        opaquefactor = 0;
-      }
-    }
-    if(mouseX >= 1500*windowWidth/1920 && mouseX <= 1900*windowWidth/1920){
-      if(mouseY >= 605*windowHeight/1080 && mouseY < 855*windowHeight/1080){
-        rpg = 1;
-        //gamestate = "rules";
-        change = true;
-        changeto = "rules";
-        if(millis()-changetime > 1000){
-          changetime = round(millis());
-        }
-      }
-    }
-    if(mouseX >= 95*windowWidth/1920 && mouseX <= 761*windowWidth/1920){
-      if(mouseY >= 520*windowHeight/1080 && mouseY <= 620*windowHeight/1080){
-        if(difficulty !== 0){
-          selection.play();
-        }
-        difficulty = 0;
-      }else if(mouseY >= 620*windowHeight/1080 && mouseY <= 720*windowHeight/1080){
-        if(difficulty !== 1){
-          selection.play();
-        }
-        difficulty = 1;
-      }else if(mouseY >= 720*windowHeight/1080 && mouseY <= 820*windowHeight/1080){
-        if(difficulty !== 2){
-          selection.play();
-        }
-        difficulty = 2;
-      }else if(mouseY >= 820*windowHeight/1080 && mouseY <= 920*windowHeight/1080){
-        if(difficulty !== 3){
-          selection.play();
-        }
-        difficulty = 3;
-      }else if(mouseY >= 920*windowHeight/1080 && mouseY <= 1025*windowHeight/1080){
-        if(difficulty !== 4){
-          selection.play();
-        }
-        difficulty = 4;
-      }
-    }
-  }else if(gamestate === "rules"){
-    if(mouseX > 1010*windowWidth/1920 && mouseX < 1430*windowWidth/1920){
-      if(mouseY > 865*windowHeight/1080 && mouseY < 1035*windowHeight/1080){
-        mouseIsPressed = false;
-        rpg -= 1;
-        mouseIsPressed = false;
-      }
-    }else if(mouseX > 1460*windowWidth/1920 && mouseX < 1880*windowWidth/1920){
-      if(mouseY > 860*windowHeight/1080 && mouseY < 1035*windowHeight/1080){
-        mouseIsPressed = false;
-        rpg += 1;
-        mouseIsPressed = false;
-      }
-    }
-  }
-}
-
-function touchMoved() {
-  flag = 1;
-  if(gamestate === "menu"){
-    if(mouseX >= 785*windowWidth/1920 && mouseX <= 1280*windowWidth/1920){
-      if(mouseY >= 625*windowHeight/1080 && mouseY < 860*windowHeight/1080){
-        switch(difficulty){
-          case 0:
-            lives = 60;
-            lifechance = 50;
-            break;
-          case 1:
-            lives = 40;
-            lifechance = 33;
-            break;
-          case 2:
-            lives = 25;
-            lifechance = 10;
-            break;
-          case 3:
-            lives = 11;
-            lifechance = 5;
-            break;
-          case 4:
-            lives = 1;
-            lifechance = 0.1;
-            break;
-        }
-        level = delete Level;
-        level = new Level;
-        lvl = 1;
-        create = true;
-        go = false;
-        change = true;
-        start = 0;
-        levelTime = 0;
-        totalTime = 0;
-        changeto = "play";
-        selection.play();
-        if(millis()-changetime > 1000){
-          changetime = round(millis());
-        }
-        player.m = true;
-        endbreaks = 0;
-        won = false;
-        player.t = 255; player.x = 160; player.y = 90;
-        wallbreaks = 0;
-        totalWallbreaks = 0;
-        opaquefactor = 0;
-      }
-    }
-    if(mouseX >= 1500*windowWidth/1920 && mouseX <= 1900*windowWidth/1920){
-      if(mouseY >= 605*windowHeight/1080 && mouseY < 855*windowHeight/1080){
-        rpg = 1;
-        //gamestate = "rules";
-        change = true;
-        changeto = "rules";
-        if(millis()-changetime > 1000){
-          changetime = round(millis());
-        }
-      }
-    }
-    if(mouseX >= 95*windowWidth/1920 && mouseX <= 761*windowWidth/1920){
-      if(mouseY >= 520*windowHeight/1080 && mouseY <= 620*windowHeight/1080){
-        if(difficulty !== 0){
-          selection.play();
-        }
-        difficulty = 0;
-      }else if(mouseY >= 620*windowHeight/1080 && mouseY <= 720*windowHeight/1080){
-        if(difficulty !== 1){
-          selection.play();
-        }
-        difficulty = 1;
-      }else if(mouseY >= 720*windowHeight/1080 && mouseY <= 820*windowHeight/1080){
-        if(difficulty !== 2){
-          selection.play();
-        }
-        difficulty = 2;
-      }else if(mouseY >= 820*windowHeight/1080 && mouseY <= 920*windowHeight/1080){
-        if(difficulty !== 3){
-          selection.play();
-        }
-        difficulty = 3;
-      }else if(mouseY >= 920*windowHeight/1080 && mouseY <= 1025*windowHeight/1080){
-        if(difficulty !== 4){
-          selection.play();
-        }
-        difficulty = 4;
-      }
-    }
-  }else if(gamestate === "rules"){
-    if(mouseX > 1010*windowWidth/1920 && mouseX < 1430*windowWidth/1920){
-      if(mouseY > 865*windowHeight/1080 && mouseY < 1035*windowHeight/1080){
-        mouseIsPressed = false;
-        rpg -= 1;
-        mouseIsPressed = false;
-      }
-    }else if(mouseX > 1460*windowWidth/1920 && mouseX < 1880*windowWidth/1920){
-      if(mouseY > 860*windowHeight/1080 && mouseY < 1035*windowHeight/1080){
-        mouseIsPressed = false;
-        rpg += 1;
-        mouseIsPressed = false;
+        touchIsPressed = false;
       }
     }
   }
