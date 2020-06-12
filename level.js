@@ -190,7 +190,7 @@ class Level{
                         stroke(0,0,0,180);
                         strokeWeight(1);
                         textStyle(BOLDITALIC);
-                        text("\nTime: "+roundoff(levelTime,3)+"s\nTotal Time: "+roundoff(totalTime,3)+"s\nWall Breaks: "+wallbreaks+"\nTotal Wall Breaks: "+totalWallbreaks+"\nTime/Wall Breaks: "+roundoff(ltwbRatio,3)+"\nTotal Time/Total Wall Breaks: "+roundoff(totalTime/totalWallbreaks,3),textx,texty+10)
+                        text("\nTime: "+await roundoff(levelTime,3)+"s\nTotal Time: "+await roundoff(totalTime,3)+"s\nWall Breaks: "+wallbreaks+"\nTotal Wall Breaks: "+totalWallbreaks+"\nTime/Wall Breaks: "+await roundoff(ltwbRatio,3)+"\nTotal Time/Total Wall Breaks: "+await roundoff(totalTime/totalWallbreaks,3),textx,texty+10)
                     }
                 }
             }else if(lvl === 2){
@@ -352,7 +352,7 @@ class Level{
                         stroke(0,0,0,180);
                         strokeWeight(1);
                         textStyle(BOLDITALIC);
-                        text("\nTime: "+roundoff(levelTime,3)+"s\nTotal Time: "+roundoff(totalTime,3)+"s\nWall Breaks: "+wallbreaks+"\nTotal Wall Breaks: "+totalWallbreaks+"\nTime/Wall Breaks: "+roundoff(ltwbRatio,3)+"\nTotal Time/Total Wall Breaks: "+roundoff(totalTime/totalWallbreaks,3),textx,texty+10)
+                        text("\nTime: "+await roundoff(levelTime,3)+"s\nTotal Time: "+await roundoff(totalTime,3)+"s\nWall Breaks: "+wallbreaks+"\nTotal Wall Breaks: "+totalWallbreaks+"\nTime/Wall Breaks: "+await roundoff(ltwbRatio,3)+"\nTotal Time/Total Wall Breaks: "+await roundoff(totalTime/totalWallbreaks,3),textx,texty+10)
                     }
                 }
             }else if(lvl === 3){
@@ -531,7 +531,7 @@ class Level{
                         stroke(0,0,0,180);
                         strokeWeight(1);
                         textStyle(BOLDITALIC);
-                        text("\nTime: "+roundoff(levelTime,3)+"s\nTotal Time: "+roundoff(totalTime,3)+"s\nWall Breaks: "+wallbreaks+"\nTotal Wall Breaks: "+totalWallbreaks+"\nTime/Wall Breaks: "+roundoff(ltwbRatio,3)+"\nTotal Time/Total Wall Breaks: "+roundoff(totalTime/totalWallbreaks,3),textx,texty+10)
+                        text("\nTime: "+await roundoff(levelTime,3)+"s\nTotal Time: "+await roundoff(totalTime,3)+"s\nWall Breaks: "+wallbreaks+"\nTotal Wall Breaks: "+totalWallbreaks+"\nTime/Wall Breaks: "+await roundoff(ltwbRatio,3)+"\nTotal Time/Total Wall Breaks: "+await roundoff(totalTime/totalWallbreaks,3),textx,texty+10)
                     }
                 }
             }else if(lvl === 4){
@@ -724,7 +724,7 @@ class Level{
                         stroke(0,0,0,180);
                         strokeWeight(1);
                         textStyle(BOLDITALIC);
-                        text("\nTime: "+roundoff(levelTime,3)+"s\nTotal Time: "+roundoff(totalTime,3)+"s\nWall Breaks: "+wallbreaks+"\nTotal Wall Breaks: "+totalWallbreaks+"\nTime/Wall Breaks: "+roundoff(ltwbRatio,3)+"\nTotal Time/Total Wall Breaks: "+roundoff(totalTime/totalWallbreaks,3),textx,texty+10)
+                        text("\nTime: "+await roundoff(levelTime,3)+"s\nTotal Time: "+await roundoff(totalTime,3)+"s\nWall Breaks: "+wallbreaks+"\nTotal Wall Breaks: "+totalWallbreaks+"\nTime/Wall Breaks: "+await roundoff(ltwbRatio,3)+"\nTotal Time/Total Wall Breaks: "+await roundoff(totalTime/totalWallbreaks,3),textx,texty+10)
                     }
                 }
             }else if(lvl === 5){
@@ -920,7 +920,7 @@ class Level{
                         stroke(0,0,0,180);
                         strokeWeight(1);
                         textStyle(BOLDITALIC);
-                        text("\nTime: "+roundoff(levelTime,3)+"s\nTotal Time: "+roundoff(totalTime,3)+"s\nWall Breaks: "+wallbreaks+"\nTotal Wall Breaks: "+totalWallbreaks+"\nTime/Wall Breaks: "+roundoff(ltwbRatio,3)+"\nTotal Time/Total Wall Breaks: "+roundoff(totalTime/totalWallbreaks,3),textx,texty+10)
+                        text("\nTime: "+await roundoff(levelTime,3)+"s\nTotal Time: "+await roundoff(totalTime,3)+"s\nWall Breaks: "+wallbreaks+"\nTotal Wall Breaks: "+totalWallbreaks+"\nTime/Wall Breaks: "+await roundoff(ltwbRatio,3)+"\nTotal Time/Total Wall Breaks: "+await roundoff(totalTime/totalWallbreaks,3),textx,texty+10)
                     }
                 }
             }else if(lvl === 6){
@@ -1121,7 +1121,7 @@ class Level{
                         stroke(0,0,0,180);
                         strokeWeight(1);
                         textStyle(BOLDITALIC);
-                        text("\nTime: "+roundoff(levelTime,3)+"s\nTotal Time: "+roundoff(totalTime,3)+"s\nWall Breaks: "+wallbreaks+"\nTotal Wall Breaks: "+totalWallbreaks+"\nTime/Wall Breaks: "+roundoff(ltwbRatio,3)+"\nTotal Time/Total Wall Breaks: "+roundoff(totalTime/totalWallbreaks,3),textx,texty+10)
+                        text("\nTime: "+await roundoff(levelTime,3)+"s\nTotal Time: "+await roundoff(totalTime,3)+"s\nWall Breaks: "+wallbreaks+"\nTotal Wall Breaks: "+totalWallbreaks+"\nTime/Wall Breaks: "+await roundoff(ltwbRatio,3)+"\nTotal Time/Total Wall Breaks: "+await roundoff(totalTime/totalWallbreaks,3),textx,texty+10)
                     }
                 }
             }else if(lvl === 7){
@@ -1327,7 +1327,7 @@ class Level{
                         stroke(0,0,0,180);
                         strokeWeight(1);
                         textStyle(BOLDITALIC);
-                        text("\nTime: "+roundoff(levelTime,3)+"s\nTotal Time: "+roundoff(totalTime,3)+"s\nWall Breaks: "+wallbreaks+"\nTotal Wall Breaks: "+totalWallbreaks+"\nTime/Wall Breaks: "+roundoff(ltwbRatio,3)+"\nTotal Time/Total Wall Breaks: "+roundoff(totalTime/totalWallbreaks,3),textx,texty+10)
+                        text("\nTime: "+await roundoff(levelTime,3)+"s\nTotal Time: "+await roundoff(totalTime,3)+"s\nWall Breaks: "+wallbreaks+"\nTotal Wall Breaks: "+totalWallbreaks+"\nTime/Wall Breaks: "+await roundoff(ltwbRatio,3)+"\nTotal Time/Total Wall Breaks: "+await roundoff(totalTime/totalWallbreaks,3),textx,texty+10)
                     }
                 }
             }else if(lvl === 8){
@@ -1537,7 +1537,7 @@ class Level{
                         stroke(0,0,0,180);
                         strokeWeight(1);
                         textStyle(BOLDITALIC);
-                        text("\nTime: "+roundoff(levelTime,3)+"s\nTotal Time: "+roundoff(totalTime,3)+"s\nWall Breaks: "+wallbreaks+"\nTotal Wall Breaks: "+totalWallbreaks+"\nTime/Wall Breaks: "+roundoff(ltwbRatio,3)+"\nTotal Time/Total Wall Breaks: "+roundoff(totalTime/totalWallbreaks,3),textx,texty+10)
+                        text("\nTime: "+await roundoff(levelTime,3)+"s\nTotal Time: "+await roundoff(totalTime,3)+"s\nWall Breaks: "+wallbreaks+"\nTotal Wall Breaks: "+totalWallbreaks+"\nTime/Wall Breaks: "+await roundoff(ltwbRatio,3)+"\nTotal Time/Total Wall Breaks: "+await roundoff(totalTime/totalWallbreaks,3),textx,texty+10)
                     }
                 }
             }else if(lvl === 9){
@@ -1753,7 +1753,7 @@ class Level{
                         stroke(0,0,0,180);
                         strokeWeight(1);
                         textStyle(BOLDITALIC);
-                        text("\nTime: "+roundoff(levelTime,3)+"s\nTotal Time: "+roundoff(totalTime,3)+"s\nWall Breaks: "+wallbreaks+"\nTotal Wall Breaks: "+totalWallbreaks+"\nTime/Wall Breaks: "+roundoff(ltwbRatio,3)+"\nTotal Time/Total Wall Breaks: "+roundoff(totalTime/totalWallbreaks,3),textx,texty+10);
+                        text("\nTime: "+await roundoff(levelTime,3)+"s\nTotal Time: "+await roundoff(totalTime,3)+"s\nWall Breaks: "+wallbreaks+"\nTotal Wall Breaks: "+totalWallbreaks+"\nTime/Wall Breaks: "+await roundoff(ltwbRatio,3)+"\nTotal Time/Total Wall Breaks: "+await roundoff(totalTime/totalWallbreaks,3),textx,texty+10);
                     }
                 }
             }else if(lvl === 10){
@@ -2110,7 +2110,7 @@ class Level{
                         stroke(0,0,0,180);
                         strokeWeight(1);
                         textStyle(BOLDITALIC);
-                        text("\nTime: "+roundoff(levelTime,3)+"s\nTotal Time: "+roundoff(totalTime,3)+"s\nWall Breaks: "+wallbreaks+"\nTotal Wall Breaks: "+totalWallbreaks+"\nTime/Wall Breaks: "+roundoff(ltwbRatio,3)+"\nTotal Time/Total Wall Breaks: "+roundoff(totalTime/totalWallbreaks,3),textx,texty+10);
+                        text("\nTime: "+await roundoff(levelTime,3)+"s\nTotal Time: "+await roundoff(totalTime,3)+"s\nWall Breaks: "+wallbreaks+"\nTotal Wall Breaks: "+totalWallbreaks+"\nTime/Wall Breaks: "+await roundoff(ltwbRatio,3)+"\nTotal Time/Total Wall Breaks: "+await roundoff(totalTime/totalWallbreaks,3),textx,texty+10);
                     }
                     if(rbt[0].dashin >= -0.5 && !go){
                         textAlign(CENTER);
@@ -2170,7 +2170,7 @@ class Level{
                 stroke(0,0,0,180);
                 strokeWeight(1);
                 textStyle(BOLDITALIC);
-                text("\nTime: "+levelTime+"s\nTotal Time: "+roundoff(totalTime,3)+"s\nWall Breaks: "+wallbreaks+"\nTotal Wall Breaks: "+totalWallbreaks+"\nTime/Wall Breaks: "+roundoff(ltwbRatio,3)+"\nTotal Time/Total Wall Breaks: "+roundoff(totalTime/totalWallbreaks,3),textx1,texty1+10);
+                text("\nTime: "+levelTime+"s\nTotal Time: "+await roundoff(totalTime,3)+"s\nWall Breaks: "+wallbreaks+"\nTotal Wall Breaks: "+totalWallbreaks+"\nTime/Wall Breaks: "+await roundoff(ltwbRatio,3)+"\nTotal Time/Total Wall Breaks: "+await roundoff(totalTime/totalWallbreaks,3),textx1,texty1+10);
                 if(mouseIsPressed || flag === 1){
                     change = true;
                     changeto = "menu";
@@ -2214,7 +2214,7 @@ class Level{
                 stroke(0,0,0,180);
                 strokeWeight(1);
                 textStyle(BOLDITALIC);
-                text("\nTime: "+levelTime+"s\nTotal Time: "+roundoff(totalTime,3)+"s\nWall Breaks: "+wallbreaks+"\nTotal Wall Breaks: "+totalWallbreaks+"\nTime/Wall Breaks: "+roundoff(ltwbRatio,3)+"\nTotal Time/Total Wall Breaks: "+roundoff(totalTime/totalWallbreaks,3),textx1,texty1+10);
+                text("\nTime: "+levelTime+"s\nTotal Time: "+await roundoff(totalTime,3)+"s\nWall Breaks: "+wallbreaks+"\nTotal Wall Breaks: "+totalWallbreaks+"\nTime/Wall Breaks: "+await roundoff(ltwbRatio,3)+"\nTotal Time/Total Wall Breaks: "+await roundoff(totalTime/totalWallbreaks,3),textx1,texty1+10);
                 mainMusic.setVolume(0,0.9);
                 bossMusic.setVolume(0,0.9);
                 bossMusic2.setVolume(0,0.9);
