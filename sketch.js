@@ -786,6 +786,7 @@ function v3(e){
 
 function touchStarted() {
   flag = 1;
+  texty(touches[length-1],windowWidth/2,windowHeight/2)
   if(gamestate === "menu"){
     if(touchX >= 785*windowWidth/1920 && touchX <= 1280*windowWidth/1920){
       if(touchY >= 625*windowHeight/1080 && touchY < 860*windowHeight/1080){
