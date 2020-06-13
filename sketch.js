@@ -516,23 +516,27 @@ function draw() {
         break;
     }
     if(mouseIsPressed || touches){
-      if(millis()-changetime > 3000){
-            changetime = round(millis());
-      }else{
       if(mouseX > 1010*windowWidth/1920 && mouseX < 1430*windowWidth/1920){
         if(mouseY > 865*windowHeight/1080 && mouseY < 1035*windowHeight/1080){
           mouseIsPressed = false;
-          rpg -= 1;
+          if(millis()-changetime > 3000){
+            changetime = round(millis());
+            rpg -= 1;
+            touches = [];
+          }
           mouseIsPressed = false;
         }
       }else if(mouseX > 1460*windowWidth/1920 && mouseX < 1880*windowWidth/1920){
         if(mouseY > 860*windowHeight/1080 && mouseY < 1035*windowHeight/1080){
           mouseIsPressed = false;
-          rpg += 1;
+          if(millis()-changetime > 3000){
+            changetime = round(millis());
+            rpg += 1;
+            touches = [];
+          }
           mouseIsPressed = false;
         }
-      }
-      }
+      } 
     }
     //transition("menu",850)
   }else if(gamestate === "play"){
