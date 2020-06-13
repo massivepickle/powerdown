@@ -308,6 +308,12 @@ function draw() {
   drawSprites();
   if(gamestate === "menu"){
     background(m);
+
+    if(touches.length > 0){
+      touchcoords();
+      touches = [];
+    }
+
     camera.position.x = displayWidth/2;
     camera.position.y = displayHeight/2;
 
@@ -335,7 +341,7 @@ function draw() {
     menuMusic.setVolume(2,1);
     menuMusic.playMode('untilDone');
     menuMusic.play();
-
+  
     push();
     translate(displayWidth/2-865*(windowWidth)/1920,displayHeight/2-15*(windowHeight)/1080);
     for(var i = 0; i < 5; i++){
@@ -732,7 +738,7 @@ function del(){
   }
 }
 
-async function roundoff(v,l){
+function roundoff(v,l){
   if(v > 0){
     var val = v.toString();
     var valu = val.split("");
@@ -784,12 +790,11 @@ function v3(e){
   return retun;
 }
 
-function touchStarted() {
+function touchcoords() {
   flag = 1;
-  text(touches[length-1]+" "+touchX+" "+mouseX,windowWidth/2,windowHeight/2)
+  texty(touches[length-1],windowWidth/2,windowHeight/2)
   if(gamestate === "menu"){
-    if(touchX >= 785*windowWidth/1920 && touchX <= 1280*windowWidth/1920){
-      if(touchY >= 625*windowHeight/1080 && touchY < 860*windowHeight/1080){
+    if(touches[touches.length-1] >= (785*windowWidth/1920,625*windowHeight/1080) && touches[touches.length-1] <= (1280*windowWidth/1920,860*windowHeight/1080)){
         switch(difficulty){
           case 0:
             lives = 60;
@@ -832,10 +837,9 @@ function touchStarted() {
         wallbreaks = 0;
         totalWallbreaks = 0;
         opaquefactor = 0;
-      }
     }
-    if(touchX >= 1500*windowWidth/1920 && touchX <= 1900*windowWidth/1920){
-      if(touchY >= 605*windowHeight/1080 && touchY < 855*windowHeight/1080){
+    if(touches[touches.length-1] >= (1500*windowWidth/1920,605*windowHeight/1080) && touches[touches.length-1] <= (1900*windowWidth/1920,touchY < 855*windowHeight/1080)){
+      //if(touchY >= 605*windowHeight/1080 && touchY < 855*windowHeight/1080){
         rpg = 1;
         //gamestate = "rules";
         change = true;
@@ -843,49 +847,52 @@ function touchStarted() {
         if(millis()-changetime > 1000){
           changetime = round(millis());
         }
-      }
+      //}
     }
-    if(touchX >= 95*windowWidth/1920 && touchX <= 761*windowWidth/1920){
-      if(touchY >= 520*windowHeight/1080 && touchY <= 620*windowHeight/1080){
+    if(touches[touches.length-1] >= (95*windowWidth/1920,520*windowHeight/1080) && touches[touches.length-1] <= (761*windowWidth/1920,620*windowHeight/1080)){
+      //if(touchY >= 520*windowHeight/1080 && touchY <= 620*windowHeight/1080){
         if(difficulty !== 0){
           selection.play();
         }
         difficulty = 0;
-      }else if(touchY >= 620*windowHeight/1080 && touchY <= 720*windowHeight/1080){
+    }else if(touches[touches.length-1] >= (95*windowWidth/1920,620*windowHeight/1080) && touches[touches.length-1] <= (761*windowWidth/1920,720*windowHeight/1080)){
+    //if(touchY >= 620*windowHeight/1080 && touchY <= 720*windowHeight/1080){
         if(difficulty !== 1){
           selection.play();
         }
         difficulty = 1;
-      }else if(touchY >= 720*windowHeight/1080 && touchY <= 820*windowHeight/1080){
+    }else if(touches[touches.length-1] >= (95*windowWidth/1920,720*windowHeight/1080) && touches[touches.length-1] <= (761*windowWidth/1920,820*windowHeight/1080)){
+    //if(touchY >= 720*windowHeight/1080 && touchY <= 820*windowHeight/1080){
         if(difficulty !== 2){
           selection.play();
         }
         difficulty = 2;
-      }else if(touchY >= 820*windowHeight/1080 && touchY <= 920*windowHeight/1080){
+    }else if(touches[touches.length-1] >= (95*windowWidth/1920,820*windowHeight/1080) && touches[touches.length-1] <= (761*windowWidth/1920,920*windowHeight/1080)){
         if(difficulty !== 3){
           selection.play();
         }
         difficulty = 3;
-      }else if(touchY >= 920*windowHeight/1080 && touchY <= 1025*windowHeight/1080){
+    }else if(touches[touches.length-1] >= (95*windowWidth/1920,920*windowHeight/1080) && touches[touches.length-1] <= (761*windowWidth/1920,1020*windowHeight/1080)){
         if(difficulty !== 4){
           selection.play();
         }
         difficulty = 4;
-      }
     }
   }else if(gamestate === "rules"){
-    if(touchX > 1010*windowWidth/1920 && touchX < 1430*windowWidth/1920){
-      if(touchY > 865*windowHeight/1080 && touchY < 1035*windowHeight/1080){
+    if(touches[touches.length-1] >= (1010*windowWidth/1920,865*windowHeight/1080) && touches[touches.length-1] <= (1430*windowWidth/1920,touchY < 1035*windowHeight/1080)){
+    //if(touchX > 1010*windowWidth/1920 && touchX < 1430*windowWidth/1920){
+      //if(touchY > 865*windowHeight/1080 && touchY < 1035*windowHeight/1080){
         touchIsPressed = false;
         rpg -= 1;
         touchIsPressed = false;
-      }
-    }else if(touchX > 1460*windowWidth/1920 && touchX < 1880*windowWidth/1920){
-      if(touchY > 860*windowHeight/1080 && touchY < 1035*windowHeight/1080){
+      //}
+    }else if(touches[touches.length-1] >= (1460*windowWidth/1920,860*windowHeight/1080) && touches[touches.length-1] <= (860*windowHeight/1080,1035*windowHeight/1080)){
+    //if(touchX > 1460*windowWidth/1920 && touchX < 1880*windowWidth/1920){
+      //if(touchY > 860*windowHeight/1080 && touchY < 1035*windowHeight/1080){
         touchIsPressed = false;
         rpg += 1;
         touchIsPressed = false;
-      }
+      //}
     }
   }
 }
