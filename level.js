@@ -2137,6 +2137,7 @@ class Level{
                 }
             }
             if(lives === 0 && !won){
+                flag = 0;
                 /*for(var i = 0; i < rbt.length; i++){
                     rbt[i].m = false;
                     rbt[i].k = false;
@@ -2149,6 +2150,7 @@ class Level{
                 mainMusic.setVolume(0,0.9);
                 bossMusic.setVolume(0,0.9);
                 bossMusic2.setVolume(0,0.9);
+                flag = 0;
             }
             if(lives === -1){
                 mainMusic.setVolume(0.2,0.7);
@@ -2181,6 +2183,7 @@ class Level{
                     completionMusic.setVolume(0,0);
                     winMusic.setVolume(0,0);
                     lives = -2;
+                    flag = 0;
                 }
             }
             textAlign(LEFT);
@@ -2200,6 +2203,7 @@ class Level{
                 text("FPS: "+round(frameRate()), camera.position.x+windowWidth/(camera.zoom*2) - 7, camera.position.y - windowHeight/(camera.zoom * 2) + 18);
             }
             if(lives <= -2){
+                flag = 0;
                 opaque = false;
                 textFont(agencyfb);
                 textSize(50);
