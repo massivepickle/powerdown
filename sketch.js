@@ -310,8 +310,8 @@ function draw() {
     background(m);
 
     if(touches.length > 0){
-      touchcoords();
-      console.log(touches,touches[touches.length-1]);
+      //touchcoords();
+      console.log(touches);
       touches = [];
     }
 
