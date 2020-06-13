@@ -405,7 +405,7 @@ function draw() {
           levelTime = 0;
           totalTime = 0;
           changeto = "play";
-          if(millis()-changetime > 1000){
+          if(millis()-changetime > 2000){
             changetime = round(millis());
           }
           player.m = true;
@@ -423,7 +423,7 @@ function draw() {
           //gamestate = "rules";
           change = true;
           changeto = "rules";
-          if(millis()-changetime > 1000){
+          if(millis()-changetime > 2000){
             changetime = round(millis());
           }
         }
