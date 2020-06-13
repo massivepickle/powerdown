@@ -314,7 +314,6 @@ function draw() {
       //console.log(touches);
       //touches = [];
     //}
-    text("VERY VERY HUGE TEXT/n okayyyyyyyyyysdwaodjjwjaojsdd,1400,1000);
     camera.position.x = displayWidth/2;
     camera.position.y = displayHeight/2;
 
@@ -405,7 +404,7 @@ function draw() {
           levelTime = 0;
           totalTime = 0;
           changeto = "play";
-          if(millis()-changetime > 2000){
+          if(millis()-changetime > 4000){
             changetime = round(millis());
           }
           player.m = true;
@@ -423,7 +422,7 @@ function draw() {
           //gamestate = "rules";
           change = true;
           changeto = "rules";
-          if(millis()-changetime > 2000){
+          if(millis()-changetime > 4000){
             changetime = round(millis());
           }
         }
@@ -516,6 +515,9 @@ function draw() {
         break;
     }
     if(mouseIsPressed || touches){
+      if(millis()-changetime > 3000){
+            changetime = round(millis());
+      }else{
       if(mouseX > 1010*windowWidth/1920 && mouseX < 1430*windowWidth/1920){
         if(mouseY > 865*windowHeight/1080 && mouseY < 1035*windowHeight/1080){
           mouseIsPressed = false;
@@ -528,6 +530,7 @@ function draw() {
           rpg += 1;
           mouseIsPressed = false;
         }
+      }
       }
     }
     //transition("menu",850)
