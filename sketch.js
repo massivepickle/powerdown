@@ -310,8 +310,8 @@ function draw() {
     background(m);
 
     //if(touches.length > 0){
-      touchcoords();
-      console.log(touches);
+      //touchcoords();
+      //console.log(touches);
       //touches = [];
     //}
 
@@ -370,7 +370,7 @@ function draw() {
       }
     }
     pop();
-    if(mouseIsPressed){
+    if(mouseIsPressed || touches){
       if(mouseX >= 785*windowWidth/1920 && mouseX <= 1280*windowWidth/1920){
         if(mouseY >= 625*windowHeight/1080 && mouseY < 860*windowHeight/1080){
           switch(difficulty){
@@ -515,7 +515,7 @@ function draw() {
       default:
         break;
     }
-    if(mouseIsPressed){
+    if(mouseIsPressed || touches){
       if(mouseX > 1010*windowWidth/1920 && mouseX < 1430*windowWidth/1920){
         if(mouseY > 865*windowHeight/1080 && mouseY < 1035*windowHeight/1080){
           mouseIsPressed = false;
@@ -791,7 +791,7 @@ function v3(e){
   return retun;
 }
 
-function touchcoords() {
+/*function touchcoords() {
   flag = 1;
   //text(touches[length-1],windowWidth/2,windowHeight/2)
   if(gamestate === "menu"){
@@ -896,7 +896,7 @@ function touchcoords() {
       //}
     }
   }
-}
+}*/
 
 function mousePressed() {
   flag = 1;
