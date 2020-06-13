@@ -370,7 +370,7 @@ function draw() {
       }
     }
     pop();
-    if(mouseIsPressed || touches){
+    if(mouseIsPressed || touches.length > 0){
       if(mouseX >= 785*windowWidth/1920 && mouseX <= 1280*windowWidth/1920){
         if(mouseY >= 625*windowHeight/1080 && mouseY < 860*windowHeight/1080){
           switch(difficulty){
@@ -400,12 +400,12 @@ function draw() {
           lvl = 1;
           create = true;
           go = false;
-          change = true;
           start = 0;
           levelTime = 0;
           totalTime = 0;
-          changeto = "play";
-          if(millis()-changetime > 4000){
+          if(millis()-changetime > 3000){
+            change = true;
+            changeto = "play";
             changetime = round(millis());
           }
           player.m = true;
@@ -421,10 +421,11 @@ function draw() {
         if(mouseY >= 605*windowHeight/1080 && mouseY < 855*windowHeight/1080){
           rpg = 1;
           //gamestate = "rules";
-          change = true;
-          changeto = "rules";
-          if(millis()-changetime > 4000){
+          if(millis()-changetime > 3000){
+            change = true;
+            changeto = "rules";  
             changetime = round(millis());
+            console.log(change,changeto,changetime)
           }
         }
       }
@@ -456,6 +457,7 @@ function draw() {
           difficulty = 4;
         }
       }
+      touches = [];
     }
   }else if(gamestate === "rules"){
     background(r);
@@ -515,28 +517,31 @@ function draw() {
       default:
         break;
     }
-    if(mouseIsPressed || touches){
-      if(mouseX > 1010*windowWidth/1920 && mouseX < 1430*windowWidth/1920){
-        if(mouseY > 865*windowHeight/1080 && mouseY < 1035*windowHeight/1080){
-          mouseIsPressed = false;
-          if(millis()-changetime > 3000){
-            changetime = round(millis());
-            rpg -= 1;
-            touches = [];
+    if(!change){
+      if(mouseIsPressed || touches.length > 0){
+        if(mouseX > 1010*windowWidth/1920 && mouseX < 1430*windowWidth/1920){
+          if(mouseY > 865*windowHeight/1080 && mouseY < 1035*windowHeight/1080){
+            mouseIsPressed = false;
+            if(millis()-changetime > 300*30/frameRate()){
+              changetime = round(millis());
+              rpg -= 1;
+              touches = [];
+            }
+            mouseIsPressed = false;
           }
-          mouseIsPressed = false;
-        }
-      }else if(mouseX > 1460*windowWidth/1920 && mouseX < 1880*windowWidth/1920){
-        if(mouseY > 860*windowHeight/1080 && mouseY < 1035*windowHeight/1080){
-          mouseIsPressed = false;
-          if(millis()-changetime > 3000){
-            changetime = round(millis());
-            rpg += 1;
-            touches = [];
+        }else if(mouseX > 1460*windowWidth/1920 && mouseX < 1880*windowWidth/1920){
+          if(mouseY > 860*windowHeight/1080 && mouseY < 1035*windowHeight/1080){
+            mouseIsPressed = false;
+            if(millis()-changetime > 300*30/frameRate()){
+              changetime = round(millis());
+              rpg += 1;
+              touches = [];
+            }
+            mouseIsPressed = false;
           }
-          mouseIsPressed = false;
         }
-      } 
+        touches = [];
+      }
     }
     //transition("menu",850)
   }else if(gamestate === "play"){
@@ -549,10 +554,9 @@ function draw() {
     }else{
       camera.zoom = 5 * windowHeight/1080;
     }
-    if(touches){
+    if(touches.length > 0){
+      touches = [];
       flag = 1;
-    }else{
-      flag = 0;
     }
     //background(a); 
     level.play();
