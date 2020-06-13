@@ -309,11 +309,11 @@ function draw() {
   if(gamestate === "menu"){
     background(m);
 
-    if(touches.length > 0){
+    //if(touches.length > 0){
       //touchcoords();
       console.log(touches);
       //touches = [];
-    }
+    //}
 
     camera.position.x = displayWidth/2;
     camera.position.y = displayHeight/2;
