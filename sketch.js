@@ -793,7 +793,7 @@ function v3(e){
 
 function touchcoords() {
   flag = 1;
-  texty(touches[length-1],windowWidth/2,windowHeight/2)
+  //text(touches[length-1],windowWidth/2,windowHeight/2)
   if(gamestate === "menu"){
     if(touches[touches.length-1] >= (785*windowWidth/1920,625*windowHeight/1080) && touches[touches.length-1] <= (1280*windowWidth/1920,860*windowHeight/1080)){
         switch(difficulty){
