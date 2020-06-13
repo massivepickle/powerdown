@@ -541,6 +541,11 @@ function draw() {
     }else{
       camera.zoom = 5 * windowHeight/1080;
     }
+    if(touches){
+      flag = 1;
+    }else{
+      flag = 0;
+    }
     //background(a); 
     level.play();
   }
