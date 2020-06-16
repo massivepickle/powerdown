@@ -395,6 +395,8 @@ function draw() {
               lifechance = 0.1;
               break;
           }
+          gem = delete Gems;
+          gem = new Gems;
           level = delete Level;
           level = new Level;
           lvl = 1;
@@ -583,6 +585,7 @@ function transition(state,time){
     if(gamestate === "play" && gamestate !== state){
       gamestate = state;
       del();
+      delgo();
     }
     gamestate = state;
     tint(255,255-div2*8.5/33);
@@ -612,9 +615,14 @@ function d(arr){
   arr = delete [];
 }
 
+function delgo(){
+  delarr(rbt);
+  delarr(robot);
+  delarr(gem);
+}
+
 function del(){
   if(lvl >= 1){
-    delarr(rbt);
     delarr(l1_l1);
     d(level1_layer1);
     if(lvl >= 2){
