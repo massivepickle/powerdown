@@ -314,6 +314,7 @@ function draw() {
       //console.log(touches);
       //touches = [];
     //}
+    //text("VERY VERY HUGE TEXT\n okyyyyyyyyyy",1400,1000);
     camera.position.x = displayWidth/2;
     camera.position.y = displayHeight/2;
 
