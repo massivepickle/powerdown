@@ -195,6 +195,7 @@ class Level{
                 }
             }else if(lvl === 2){
                 if(create){
+                    del();
                     completionMusic.setVolume(0,0.5);
                     mouseIsPressed = false;
                     flag = 0;
@@ -357,6 +358,8 @@ class Level{
                 }
             }else if(lvl === 3){
                 if(create){
+                    del();
+                    del();
                     completionMusic.setVolume(0,0.5);
                     mouseIsPressed = false;
                     flag = 0;
@@ -536,6 +539,7 @@ class Level{
                 }
             }else if(lvl === 4){
                 if(create){
+                    del();
                     completionMusic.setVolume(0,0.5);
                     mouseIsPressed = false;
                     flag = 0;
@@ -729,6 +733,7 @@ class Level{
                 }
             }else if(lvl === 5){
                 if(create){
+                    del();
                     completionMusic.setVolume(0,0.5);
                     mouseIsPressed = false;
                     flag = 0;
@@ -925,6 +930,7 @@ class Level{
                 }
             }else if(lvl === 6){
                 if(create){
+                    del();
                     completionMusic.setVolume(0,0.5);
                     mouseIsPressed = false;
                     flag = 0;
@@ -1126,6 +1132,7 @@ class Level{
                 }
             }else if(lvl === 7){
                 if(create){
+                    del();
                     completionMusic.setVolume(0,0.5);
                     mouseIsPressed = false;
                     flag = 0;
@@ -1332,6 +1339,7 @@ class Level{
                 }
             }else if(lvl === 8){
                 if(create){
+                    del();
                     completionMusic.setVolume(0,0.5);
                     mouseIsPressed = false;
                     flag = 0;
@@ -1542,6 +1550,7 @@ class Level{
                 }
             }else if(lvl === 9){
                 if(create){
+                    del();
                     completionMusic.setVolume(0,0.5);
                     mouseIsPressed = false;
                     flag = 0;
@@ -1758,6 +1767,7 @@ class Level{
                 }
             }else if(lvl === 10){
                 if(create){
+                    del();
                     completionMusic.setVolume(0,0.5);
                     bossMusic.stop();
                     mouseIsPressed = false;
