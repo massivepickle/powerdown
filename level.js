@@ -33,6 +33,28 @@ class Level{
         stroke(255);
         line(1920/2,0,1920/2,1080);
         line(0,1080/2,1920,1080/2);
+        var vd1 = 0, vd2 = 0;
+        if(player.rotation >= 0 && player.rotation < 90){
+            vd1 = -0.5, vd2 = 0.5;
+        }else if(player.rotation >= 90 && player.rotation < 180){
+            vd1 = 0.5, vd2 = 0.5;
+        }else if(player.rotation >= 180 && player.rotation < 270){
+            vd1 = 0.5, vd2 = -0.5;
+        }else if(player.rotation >= -90 && player.rotation < 0){
+            vd1 = -0.5, vd2 = -0.5;
+        }
+        var r1er = random(-0.01,0.01), r2er = random(-0.01,0.01);
+        stroke(55+frameCount%200,70+frameCount*2%185,70+frameCount*3%185)
+        for(var i = random(1,1.01); i < (1920/100)-1; i ++){
+            for(var j = random(1,1.01); j < (1080/100)-1; j ++){
+                line((i+r1er)*100,(j+r2er)*100,(i+r1er)*100+vd1,(j+r2er)*100+vd2);
+            }
+        }
+        /*for(var i = 0; i < jarr.length; i++){
+            if(!jarr[i]){
+                jarr[i] = 
+            }
+        }*/
         for(var i = 0; i < 4; i++){
             push();
             translate(edge[i].x,edge[i].y);
